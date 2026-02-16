@@ -1,0 +1,16 @@
+{
+  "frontend/src/index.css": "Global styles with a cinematic black-and-white OKLCH color system, bold typography scale, and minimal design tokens for both light and dark modes.",
+  "frontend/tailwind.config.js": "Extended Tailwind configuration with custom container padding, Inter font stack, letter-spacing utilities, and zero border-radius for sharp, minimal aesthetic.",
+  "frontend/src/App.tsx": "Root application component with TanStack Router setup for five pages (Home, Services, About, Join Network, Contact) wrapped in shared SiteLayout.",
+  "frontend/src/components/site/SiteLayout.tsx": "Shared layout wrapper that renders SiteHeader, page content via Outlet, and SiteFooter across all routes.",
+  "frontend/src/components/site/SiteHeader.tsx": "Sticky header navigation with logo, desktop/mobile menu, and active route highlighting using TanStack Router.",
+  "frontend/src/components/site/SiteFooter.tsx": "Footer component with brand tagline, nationwide operations messaging, social links (Instagram, LinkedIn, YouTube), and Caffeine attribution with UTM tracking.",
+  "frontend/src/components/site/PrimaryButton.tsx": "Reusable button component wrapping shadcn Button with custom primary/secondary variants, properly typed by omitting the conflicting variant prop from Button and defining its own variant type.",
+  "frontend/src/components/site/PortfolioPreview.tsx": "Portfolio grid component displaying six grayscale project thumbnails with hover effects and category labels.",
+  "frontend/src/pages/HomePage.tsx": "Home page with hero section using generated background image, tagline \"From Coast to Coast, We Capture It All\", dual CTAs, authority section, services overview, and portfolio preview.",
+  "frontend/src/pages/ServicesPage.tsx": "Services page presenting six service offerings (Sports Media, Athlete Highlights, Brand Content, Event Coverage, Monthly Retainers, Nationwide Network) with icons, descriptions, and feature lists.",
+  "frontend/src/pages/AboutPage.tsx": "About page with three sections emphasizing coast-to-coast vision, structured systems/quality control, and built-for-growth positioning with icons and detailed copy.",
+  "frontend/src/pages/JoinNetworkPage.tsx": "Join Network page with contributor-focused messaging, application form (name, email, location, specialties, portfolio link, message), and success confirmation state.",
+  "frontend/src/pages/ContactPage.tsx": "Contact page with inquiry form (name, email, company, project type, date, budget, message), nationwide operations info, social links, and success confirmation state.",
+  "frontend/src/hooks/useQueries.ts": "React Query hooks for fetching contact submissions and network applications from the backend (currently unused but available for future admin features)."
+}

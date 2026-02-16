@@ -1,0 +1,225 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Vertex Media cinematic black-and-white marketing site (frontend)",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Create a cohesive high-end black/white design system with consistent typography, spacing, and button styles across all pages.",
+      "acceptanceCriteria": [
+        "All pages share a consistent header, footer, typography scale, and spacing system.",
+        "Primary and secondary buttons are visually consistent across pages.",
+        "No default/unstyled template UI remains (overall look feels intentionally designed)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "create",
+          "description": "Create the app stylesheet imported by the immutable frontend/src/main.tsx; include a minimal cinematic black/white design system (typography scale, spacing rules, button/link treatments) and import/compose from existing Tailwind setup where appropriate."
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Extend Tailwind theme tokens (fonts/letter-spacing/containers as needed) to support the bold, minimal, grid-based cinematic aesthetic across pages."
+        },
+        {
+          "path": "frontend/src/components/site/SiteLayout.tsx",
+          "operation": "create",
+          "description": "Create a shared layout wrapper that enforces consistent grid/container spacing and applies the global typographic rhythm across all pages."
+        },
+        {
+          "path": "frontend/src/components/site/PrimaryButton.tsx",
+          "operation": "create",
+          "description": "Create a small wrapper component for consistent primary/secondary CTA styling using shadcn-ui Button as the base. Verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Implement client-side routing with a shared header navigation and footer across Home, Services, About, Join Our Network, and Contact.",
+      "acceptanceCriteria": [
+        "Each page is reachable via header navigation without full page reload.",
+        "Footer appears on all pages and includes social link placeholders (e.g., Instagram, LinkedIn, YouTube)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "create",
+          "description": "Implement the root app router and route table for Home, Services, About, Join Our Network, and Contact; wrap routes with the shared SiteLayout so header/footer appear site-wide."
+        },
+        {
+          "path": "frontend/src/components/site/SiteHeader.tsx",
+          "operation": "create",
+          "description": "Create the header navigation component with links to all required pages and styling consistent with the cinematic black/white design system."
+        },
+        {
+          "path": "frontend/src/components/site/SiteFooter.tsx",
+          "operation": "create",
+          "description": "Create the footer component that appears on all pages, includes nationwide positioning copy, and contains social link placeholders (Instagram, LinkedIn, YouTube)."
+        },
+        {
+          "path": "frontend/src/components/site/SiteLayout.tsx",
+          "operation": "modify",
+          "description": "Wire the new SiteHeader and SiteFooter into the shared layout so all routed pages consistently render them."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Build the Home page with hero, exact tagline, above-the-fold CTAs, authority section, services overview, and portfolio preview.",
+      "acceptanceCriteria": [
+        "Tagline text matches exactly: “From Coast to Coast, We Capture It All”.",
+        "Both CTAs are visible above the fold on typical desktop widths.",
+        "Home includes distinct sections for authority, services overview, and portfolio preview."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/HomePage.tsx",
+          "operation": "create",
+          "description": "Create the Home page with: strong hero headline; exact tagline text “From Coast to Coast, We Capture It All”; prominent CTAs labeled “Book a Shoot” and “Join the Network”; an authority section about nationwide expansion/curated network; a services overview section; and a portfolio preview section."
+        },
+        {
+          "path": "frontend/src/components/site/PrimaryButton.tsx",
+          "operation": "modify",
+          "description": "Ensure the CTA wrapper supports both primary and secondary variants appropriate for the Home hero CTAs using shadcn-ui Button. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Register/wire the HomePage route so it is reachable from navigation and loads without full page reload."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Create the Services page with six scannable service offerings and confident national-agency copy.",
+      "acceptanceCriteria": [
+        "All six services are listed and easy to scan (cards/sections).",
+        "Copy reads as a national agency offering (not a local freelancer)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/ServicesPage.tsx",
+          "operation": "create",
+          "description": "Create a Services page that clearly presents: Sports Media Production, Athlete Highlights, Brand Content, Event Coverage, Monthly Retainers, Nationwide Contributor Network; use a card/section layout with concise, confident national-agency tone."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Register/wire the ServicesPage route and ensure it appears in header navigation."
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Create the About page emphasizing coast-to-coast vision, structured systems/quality control, and built-for-growth positioning.",
+      "acceptanceCriteria": [
+        "About page includes explicit messaging for all three bullets (vision, systems/quality, growth).",
+        "Layout remains minimal, bold, and high-end consistent with the design system."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/AboutPage.tsx",
+          "operation": "create",
+          "description": "Create an About page with explicit sections for (1) coast-to-coast vision, (2) structured systems & quality control, and (3) built-for-growth positioning, in a minimal, bold, high-end layout."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Register/wire the AboutPage route and ensure it appears in header navigation."
+        }
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "summary": "Create the Join Our Network page with curated-approval messaging and an application form that submits and shows a success state.",
+      "acceptanceCriteria": [
+        "Join Our Network page clearly communicates curated approvals and national opportunity.",
+        "Application form includes fields: name, email, location/market, specialties, portfolio link, message.",
+        "Submitting the form shows a success confirmation state in the UI."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/JoinNetworkPage.tsx",
+          "operation": "create",
+          "description": "Create the Join Our Network page with contributor-focused messaging (curated approvals + national opportunity) and an application form containing: name, email, location/market, specialties, portfolio link, short message; include an on-submit success confirmation UI state."
+        },
+        {
+          "path": "frontend/src/lib/backendClient.ts",
+          "operation": "create",
+          "description": "Create a small frontend helper that uses the existing actor hook to call backend submitNetworkApplication and normalizes form values (including any optional handling needed on the frontend) for the Join Network submission."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Register/wire the JoinNetworkPage route and ensure it appears in header navigation and is reachable without full page reload."
+        }
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "summary": "Create the Contact page with inquiry form, nationwide operations messaging, and social links; submit and show a success state.",
+      "acceptanceCriteria": [
+        "Contact page includes the inquiry form, nationwide operations message, and social link placeholders.",
+        "Submitting the inquiry form shows a success confirmation state in the UI."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/ContactPage.tsx",
+          "operation": "create",
+          "description": "Create the Contact page with (1) inquiry form fields: name, email, company/organization (optional), project type, desired date (optional), budget range (optional), message; (2) nationwide operations messaging; and (3) social link placeholders; include an on-submit success confirmation UI state."
+        },
+        {
+          "path": "frontend/src/lib/backendClient.ts",
+          "operation": "modify",
+          "description": "Add frontend capability to submit Contact inquiries via backend submitContact, mapping optional fields to null as required by the backend interface."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Register/wire the ContactPage route and ensure it appears in header navigation."
+        }
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "summary": "Add a cinematic grayscale Portfolio preview section on Home using curated placeholder items with captions.",
+      "acceptanceCriteria": [
+        "Portfolio preview shows multiple items with titles/captions and grayscale visuals.",
+        "Portfolio section styling matches the black/white high-end theme."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/site/PortfolioPreview.tsx",
+          "operation": "create",
+          "description": "Create a PortfolioPreview component that renders multiple curated placeholder items (sports, brand, events, etc.) with concise captions and consistent grayscale visual treatment aligned to the black/white design system."
+        },
+        {
+          "path": "frontend/src/pages/HomePage.tsx",
+          "operation": "modify",
+          "description": "Wire the PortfolioPreview component into the Home page as the portfolio preview section (distinct from hero/authority/services sections)."
+        }
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "summary": "Render the generated static hero background, wordmark, and portfolio thumbnails from frontend/public/assets/generated on the Home page.",
+      "acceptanceCriteria": [
+        "Images are loaded as static assets from frontend/public/assets/generated (not served from the backend).",
+        "Home hero and portfolio preview visibly use the generated assets."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/HomePage.tsx",
+          "operation": "modify",
+          "description": "Wire the generated static assets into the Home hero and branding: use frontend/public/assets/generated/vertex-hero-bg.dim_2400x1350.png as a hero background visual and frontend/public/assets/generated/vertex-wordmark.dim_1200x300.png as the typographic wordmark image."
+        },
+        {
+          "path": "frontend/src/components/site/PortfolioPreview.tsx",
+          "operation": "modify",
+          "description": "Render the six generated grayscale thumbnails as portfolio visuals: frontend/public/assets/generated/vertex-portfolio-01.dim_1200x800.png, frontend/public/assets/generated/vertex-portfolio-02.dim_1200x800.png, frontend/public/assets/generated/vertex-portfolio-03.dim_1200x800.png, frontend/public/assets/generated/vertex-portfolio-04.dim_1200x800.png, frontend/public/assets/generated/vertex-portfolio-05.dim_1200x800.png, frontend/public/assets/generated/vertex-portfolio-06.dim_1200x800.png."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-16T00:27:10.180Z",
+  "summary": "Most frontend requirements (design system styling, routing/layout, pages with required sections/forms, CTAs/tagline, portfolio preview, header/footer with social placeholders) appear implemented. Backend submission persistence/methods are present but the Motoko storage/mutation logic shown is likely incorrect (immutable List usage), and there are extra backend/query utilities not requested.",
+  "missing_requirements": [
+    {
+      "id": "REQ-8",
+      "requirement": "Implement backend persistence for Contact inquiries and Join Network applications in the Motoko canister with timestamps; expose canister methods for creating submissions used by the frontend.",
+      "reason": "Although submitContact/submitNetworkApplication and timestamp fields are defined, the shown persistence mechanism appears non-functional: submissions are stored in `let` bindings initialized with `List.empty`, then mutated via `contactSubmissions.add(...)` / `networkApplications.add(...)`, which is not shown as valid/working state mutation. This likely prevents actual storage/persistence and could break frontend submissions.",
+      "evidence": [
+        "backend/main.mo"
+      ]
+    }
+  ],
+  "hallucinated_features": [
+    {
+      "description": "Backend query methods to list and lookup submissions (getContactSubmissions/getNetworkApplications and *ByEmail variants).",
+      "reason": "BuildRequest only asked for methods to create/store submissions for the frontend; admin/review functionality is explicitly a non-goal, and these query endpoints go beyond the requested scope.",
+      "evidence": [
+        "backend/main.mo",
+        "frontend/src/hooks/useQueries.ts"
+      ]
+    },
+    {
+      "description": "Footer attribution link to caffeine.ai including a heart emoji.",
+      "reason": "Not requested by the BuildRequest; additionally introduces non-specified branding/attribution content in the global footer.",
+      "evidence": [
+        "frontend/src/components/site/SiteFooter.tsx"
+      ]
+    }
+  ],
+  "confidence": 0.74,
+  "changed_files": [
+    "all_files_summary.json",
+    "backend/main.mo",
+    "frontend-file-summaries.txt",
+    "frontend/index.css",
+    "frontend/index.html",
+    "frontend/src/App.tsx",
+    "frontend/src/components/site/PortfolioPreview.tsx",
+    "frontend/src/components/site/PrimaryButton.tsx",
+    "frontend/src/components/site/SiteFooter.tsx",
+    "frontend/src/components/site/SiteHeader.tsx",
+    "frontend/src/components/site/SiteLayout.tsx",
+    "frontend/src/hooks/useActor.ts",
+    "frontend/src/hooks/useInternetIdentity.ts",
+    "frontend/src/hooks/useQueries.ts",
+    "frontend/src/index.css",
+    "frontend/src/main.tsx",
+    "frontend/src/pages/AboutPage.tsx",
+    "frontend/src/pages/ContactPage.tsx",
+    "frontend/src/pages/HomePage.tsx",
+    "frontend/src/pages/JoinNetworkPage.tsx",
+    "frontend/src/pages/ServicesPage.tsx",
+    "frontend/tailwind.config.js",
+    "project_state.json"
+  ]
+}

@@ -1,0 +1,136 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Build a modern, high-end black-and-white marketing website for Vertex Media, a fast-growing national media agency, emphasizing nationwide expansion and a curated network of elite photographers/videographers.",
+  "architectural_notes": [
+    "Site should communicate a national-scale, high-end agency brand (not a local freelancer) using a black/white palette, bold typography, and clean minimal layout.",
+    "Primary CTAs across site: “Book a Shoot” and “Join the Network”."
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Cinematic grayscale hero background with subtle film grain and abstract motion/lighting (vertex-hero-bg.dim_2400x1350.png)\n- Set of 6 grayscale portfolio thumbnails with cinematic contrast and minimal abstract subject cues (vertex-portfolio-01.dim_1200x800.png)\n- Set of 6 grayscale portfolio thumbnails with cinematic contrast and minimal abstract subject cues (vertex-portfolio-02.dim_1200x800.png)\n- Set of 6 grayscale portfolio thumbnails with cinematic contrast and minimal abstract subject cues (vertex-portfolio-03.dim_1200x800.png)\n- Set of 6 grayscale portfolio thumbnails with cinematic contrast and minimal abstract subject cues (vertex-portfolio-04.dim_1200x800.png)\n- Set of 6 grayscale portfolio thumbnails with cinematic contrast and minimal abstract subject cues (vertex-portfolio-05.dim_1200x800.png)\n- Set of 6 grayscale portfolio thumbnails with cinematic contrast and minimal abstract subject cues (vertex-portfolio-06.dim_1200x800.png)\n- Minimal black-and-white typographic wordmark reading “Vertex Media” (vertex-wordmark.dim_1200x300.png)",
+  "existing_features": [
+    {
+      "id": "feature-create-a-cohesive-visual-design-system-for-the-vertex-media-marketing-site-that-matches-a-high-end-cinematic-minimal-aesthetic-black-white-base-bold-typography-clean-grid-based-layout-confident-professional-tone-and-consistent-spacing-typography-rules-across-all-pages",
+      "title": "Create a cohesive visual design system for the Vertex Media marketing site that matches a high-end, cinematic, minimal aesthetic: black/white base, bold typography, clean grid-based layout, confident professional tone, and consistent spacing/typography rules across all pages.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-site-wide-navigation-and-routing-for-the-following-pages-home-services-about-join-our-network-contact-include-a-header-nav-and-a-footer-with-nationwide-positioning-and-social-links",
+      "title": "Implement site-wide navigation and routing for the following pages: Home, Services, About, Join Our Network, Contact. Include a header nav and a footer with nationwide positioning and social links.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-the-home-page-with-1-a-strong-hero-headline-2-the-exact-tagline-from-coast-to-coast-we-capture-it-all-3-prominent-cta-buttons-labeled-book-a-shoot-and-join-the-network-4-a-short-authority-section-about-expanding-nationwide-and-building-a-curated-network-5-a-services-overview-section-and-6-a-portfolio-preview-section",
+      "title": "Build the Home page with: (1) a strong hero headline, (2) the exact tagline “From Coast to Coast, We Capture It All”, (3) prominent CTA buttons labeled “Book a Shoot” and “Join the Network”, (4) a short authority section about expanding nationwide and building a curated network, (5) a services overview section, and (6) a portfolio preview section.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-the-services-page-with-clearly-presented-service-offerings-sports-media-production-athlete-highlights-brand-content-event-coverage-monthly-retainers-nationwide-contributor-network-each-service-should-have-concise-confident-copy-consistent-with-the-brand-tone",
+      "title": "Create the Services page with clearly presented service offerings: Sports Media Production, Athlete Highlights, Brand Content, Event Coverage, Monthly Retainers, Nationwide Contributor Network. Each service should have concise, confident copy consistent with the brand tone.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-the-about-page-emphasizing-1-the-vision-to-scale-coast-to-coast-2-structured-systems-and-quality-control-and-3-built-for-growth-positioning-keep-the-tone-confident-and-ambitious",
+      "title": "Create the About page emphasizing: (1) the vision to scale coast to coast, (2) structured systems and quality control, and (3) built-for-growth positioning. Keep the tone confident and ambitious.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-the-join-our-network-page-with-contributor-focused-messaging-that-emphasizes-curated-approvals-and-national-opportunity-plus-a-contributor-application-cta-that-opens-or-displays-an-application-form-name-email-location-market-specialties-portfolio-link-short-message",
+      "title": "Create the Join Our Network page with contributor-focused messaging that emphasizes curated approvals and national opportunity, plus a contributor application CTA that opens or displays an application form (name, email, location/market, specialties, portfolio link, short message).",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-the-contact-page-with-1-an-inquiry-form-name-email-company-organization-optional-project-type-desired-date-optional-budget-range-optional-message-2-messaging-about-nationwide-operations-and-3-social-links",
+      "title": "Create the Contact page with: (1) an inquiry form (name, email, company/organization optional, project type, desired date optional, budget range optional, message), (2) messaging about nationwide operations, and (3) social links.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-portfolio-section-home-preview-that-presents-a-cinematic-national-agency-feel-using-curated-placeholder-items-e-g-sports-brand-events-with-consistent-grayscale-visuals-and-concise-captions",
+      "title": "Add a Portfolio section (Home preview) that presents a cinematic, national-agency feel using curated placeholder items (e.g., sports, brand, events) with consistent grayscale visuals and concise captions.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-and-render-generated-static-image-assets-stored-under-frontend-public-assets-generated-to-support-the-cinematic-black-and-white-design-including-a-hero-background-and-a-small-set-of-grayscale-portfolio-thumbnails",
+      "title": "Add and render generated static image assets (stored under frontend/public/assets/generated) to support the cinematic black-and-white design, including a hero background and a small set of grayscale portfolio thumbnails.",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create Home page with strong hero headline, tagline, primary CTAs (Book a Shoot, Join the Network), nationwide authority section, services overview, and portfolio section",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Create Services page listing: Sports Media Production, Athlete Highlights, Brand Content, Event Coverage, Monthly Retainers, Nationwide Contributor Network",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Create About page highlighting coast-to-coast vision, structured systems + quality control, and growth-driven positioning",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Create Join Our Network page with contributor application CTA and messaging about curated approvals + national opportunity",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Create Contact page with inquiry form, nationwide operations message, and social links",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Apply brand tone and visual design system: black/white base, bold typography, clean minimal layout, cinematic/high-end feel",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-14",
+      "summary": "Implement backend persistence for form submissions: store Contact inquiries and Join Network applications in the Motoko canister with timestamps. Expose canister methods for creating submissions; the frontend uses these methods on form submit.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Vertex Media",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}
