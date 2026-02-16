@@ -1,6 +1,5 @@
 import { useNavigate } from '@tanstack/react-router';
 import { PrimaryButton } from '../components/site/PrimaryButton';
-import { PortfolioPreview } from '../components/site/PortfolioPreview';
 import { ArrowRight, Globe, Users, Zap } from 'lucide-react';
 
 export function HomePage() {
@@ -147,9 +146,6 @@ export function HomePage() {
           </div>
         </div>
       </section>
-
-      {/* Portfolio Preview */}
-      <PortfolioPreview />
     </div>
   );
 }

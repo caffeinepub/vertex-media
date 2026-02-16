@@ -1,6 +1,6 @@
 import { useNavigate } from '@tanstack/react-router';
 import { PrimaryButton } from '../components/site/PrimaryButton';
-import { Camera, Film, Briefcase, Calendar, Repeat, Network } from 'lucide-react';
+import { Camera, Film, Video, Briefcase, Calendar, Repeat, Network } from 'lucide-react';
 
 export function ServicesPage() {
   const navigate = useNavigate();
@@ -8,74 +8,89 @@ export function ServicesPage() {
   const services = [
     {
       icon: Camera,
-      title: 'Sports Media Production',
-      description:
-        'Comprehensive game coverage, training documentation, and performance analysis for teams, leagues, and athletic programs. We deliver broadcast-quality footage with fast turnaround times, enabling coaches and athletes to review, analyze, and share their best moments.',
-      features: [
-        'Multi-camera game coverage',
-        'Training session documentation',
-        'Performance analysis footage',
-        'Highlight reel production',
-      ],
+      title: 'Sports Photography',
+      description: 'High-impact photography for athletes, teams, and programs.',
+    },
+    {
+      icon: Video,
+      title: 'Sports Videography',
+      description: 'High-impact videography for athletes, teams, and programs.',
     },
     {
       icon: Film,
-      title: 'Athlete Highlights',
+      title: 'Athlete Highlight Packages',
       description:
-        'Recruiting reels, social media content, and personal brand development for athletes at every level. From high school prospects to professional competitors, we craft compelling visual narratives that showcase talent, work ethic, and personality.',
-      features: [
-        'Recruiting highlight reels',
-        'Social media content packages',
-        'Personal brand photography',
-        'Behind-the-scenes storytelling',
-      ],
+        'Performance-driven highlight reels designed for recruitment, exposure, and branding.',
     },
     {
       icon: Briefcase,
-      title: 'Brand Content',
+      title: 'Brand Content Creation',
       description:
-        'Commercial photography and video production for products, campaigns, and digital platforms. We partner with brands to create scroll-stopping content that drives engagement, builds awareness, and converts audiences into customers.',
-      features: [
-        'Product photography & video',
-        'Campaign creative production',
-        'Social media content creation',
-        'E-commerce visual assets',
-      ],
+        'Strategic photo and video content built to grow brand authority and engagement.',
     },
     {
       icon: Calendar,
       title: 'Event Coverage',
       description:
-        'Cinematic documentation of conferences, galas, tournaments, and corporate events. Our teams capture the energy, emotion, and key moments that define your event, delivering polished deliverables for marketing, recap videos, and stakeholder communications.',
-      features: [
-        'Conference & summit coverage',
-        'Tournament documentation',
-        'Corporate event photography',
-        'Gala & fundraiser media',
-      ],
+        'Professional media coverage for tournaments, showcases, and corporate events.',
     },
     {
       icon: Repeat,
-      title: 'Monthly Retainers',
+      title: 'Monthly Media Retainers',
       description:
-        'Ongoing content partnerships for organizations with consistent, high-volume production needs. Retainer clients receive priority scheduling, dedicated account management, and volume pricing for predictable, scalable content creation.',
-      features: [
-        'Priority scheduling & booking',
-        'Dedicated account management',
-        'Volume pricing discounts',
-        'Consistent creative direction',
-      ],
+        'Ongoing content production for businesses and organizations that need consistent, high-quality media.',
     },
     {
       icon: Network,
       title: 'Nationwide Contributor Network',
       description:
-        'Access our vetted network of elite photographers and videographers in markets across the United States. Whether you need coverage in one city or fifty, our contributor network delivers consistent quality and reliable execution nationwide.',
-      features: [
-        'Coverage in 50+ markets',
-        'Vetted, trained contributors',
-        'Consistent quality standards',
-        'Centralized project management',
+        'A curated network of elite photographers and videographers deployed coast to coast under Vertex Media quality standards.',
+    },
+  ];
+
+  const pricingCategories = [
+    {
+      title: 'Sports Media Production',
+      subtitle: 'High-impact photography & cinematic video for athletes, teams, and programs',
+      items: [
+        { name: 'Game Coverage', price: '$35' },
+        { name: 'Half-Day Shoot (up to 4 hours)', price: '$70' },
+        { name: 'Full-Day Shoot (up to 8 hours)', price: '$180' },
+      ],
+    },
+    {
+      title: 'Athlete mixtape Packages',
+      subtitle: 'Reels & videos for recruitment, exposure, and branding',
+      items: [{ name: 'Starter Reel', price: '$40' }],
+    },
+    {
+      title: 'Brand Content Creation',
+      subtitle: 'Strategic photo/video content for businesses and organizations',
+      items: [
+        { name: 'Social Media Package (5 posts)', price: '$500' },
+        { name: 'Monthly Content Retainer (20 posts)', price: '$1,500–$2,000' },
+        { name: 'Custom Campaign (branding + production)', price: '$3,000+' },
+      ],
+    },
+    {
+      title: 'Event Coverage',
+      subtitle: 'Professional media for tournaments, showcases, or corporate events',
+      items: [
+        { name: 'Single Event (up to 4 hours)', price: '$200' },
+        { name: 'Full Event Coverage (8+ hours)', price: '$500' },
+        { name: 'Multi-Day Event', price: 'Custom quote ($1,000+)' },
+      ],
+    },
+    {
+      title: 'Monthly Media Retainers',
+      subtitle: 'Ongoing, predictable media production for clients',
+      items: [
+        { name: 'Small Package', price: '$600/month (10–15 clips/posts)' },
+        { name: 'Medium Package', price: '$1,500/month (20–30 clips/posts)' },
+        {
+          name: 'Premium Package',
+          price: '$3,000/month (40+ clips/posts + full support)',
+        },
       ],
     },
   ];
@@ -95,9 +110,9 @@ export function ServicesPage() {
       </section>
 
       {/* Services Grid */}
-      <section className="py-24 md:py-32">
+      <section className="py-24 md:py-32 border-b border-border">
         <div className="container">
-          <div className="grid gap-16 max-w-5xl mx-auto">
+          <div className="grid gap-12 max-w-5xl mx-auto">
             {services.map((service, index) => {
               const Icon = service.icon;
               return (
@@ -111,40 +126,67 @@ export function ServicesPage() {
                     </div>
                   </div>
 
-                  <div className="space-y-6">
-                    <div className="space-y-3">
-                      <h2 className="text-3xl md:text-4xl">{service.title}</h2>
-                      <p className="text-lg text-muted-foreground leading-relaxed">
-                        {service.description}
-                      </p>
-                    </div>
-
-                    <ul className="space-y-2">
-                      {service.features.map((feature, featureIndex) => (
-                        <li
-                          key={featureIndex}
-                          className="flex items-start text-muted-foreground"
-                        >
-                          <span className="mr-3 mt-1.5 w-1.5 h-1.5 bg-foreground flex-shrink-0" />
-                          <span>{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
+                  <div className="space-y-3">
+                    <h2 className="text-3xl md:text-4xl">{service.title}</h2>
+                    <p className="text-lg text-muted-foreground leading-relaxed">
+                      {service.description}
+                    </p>
                   </div>
                 </div>
               );
             })}
           </div>
-        </div>
-      </section>
 
-      {/* CTA */}
-      <section className="py-24 md:py-32 bg-muted/30">
-        <div className="container">
-          <div className="max-w-3xl mx-auto text-center space-y-8">
-            <h2>Ready to Get Started?</h2>
+          {/* Pricing Section */}
+          <div className="max-w-5xl mx-auto mt-24 space-y-12">
+            <div className="text-center space-y-4">
+              <h2 className="text-4xl md:text-5xl">
+                Vertex Media – Service Pricing (Expanding Nationwide)
+              </h2>
+            </div>
+
+            <div className="space-y-12">
+              {pricingCategories.map((category, index) => (
+                <div key={index} className="space-y-6">
+                  <div className="space-y-2">
+                    <h3 className="text-2xl md:text-3xl">{category.title}</h3>
+                    <p className="text-muted-foreground">{category.subtitle}</p>
+                  </div>
+
+                  <div className="border border-border">
+                    {category.items.map((item, itemIndex) => (
+                      <div
+                        key={itemIndex}
+                        className={`flex justify-between items-start gap-4 p-4 md:p-6 ${
+                          itemIndex !== category.items.length - 1
+                            ? 'border-b border-border'
+                            : ''
+                        }`}
+                      >
+                        <span className="text-foreground">{item.name}</span>
+                        <span className="text-foreground font-medium whitespace-nowrap">
+                          {item.price}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="pt-8 text-center">
+              <p className="text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+                All retainers include revisions per SOP, structured delivery, and
+                agent-managed client communication.
+              </p>
+            </div>
+          </div>
+
+          {/* CTA */}
+          <div className="max-w-3xl mx-auto text-center space-y-8 mt-24">
+            <h2 className="text-3xl md:text-4xl">Ready to Scale Your Media?</h2>
             <p className="text-xl text-muted-foreground">
-              Book a shoot or join our nationwide network of elite creators.
+              Partner with a media operation built for national growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
               <PrimaryButton onClick={() => navigate({ to: '/contact' })}>
@@ -152,9 +194,9 @@ export function ServicesPage() {
               </PrimaryButton>
               <PrimaryButton
                 variant="secondary"
-                onClick={() => navigate({ to: '/join-network' })}
+                onClick={() => navigate({ to: '/contact' })}
               >
-                Join the Network
+                Partner With Vertex
               </PrimaryButton>
             </div>
           </div>

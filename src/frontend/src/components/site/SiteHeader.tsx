@@ -1,9 +1,12 @@
 import { Link, useRouterState } from '@tanstack/react-router';
 import { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Trash2 } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { DeletionConfirmationDialog } from './DeletionConfirmationDialog';
 
 export function SiteHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [deletionDialogOpen, setDeletionDialogOpen] = useState(false);
   const routerState = useRouterState();
   const currentPath = routerState.location.pathname;
 
@@ -16,56 +19,84 @@ export function SiteHeader() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-20 items-center justify-between">
-        <Link to="/" className="flex items-center space-x-2">
-          <span className="text-2xl font-bold tracking-tighter">VERTEX MEDIA</span>
-        </Link>
+    <>
+      <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+        <div className="container flex h-20 items-center justify-between">
+          <Link to="/" className="flex items-center space-x-2">
+            <span className="text-2xl font-bold tracking-tighter">VERTEX MEDIA</span>
+          </Link>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-8">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              to={link.href}
-              className={`text-sm font-medium tracking-wide transition-colors hover:text-foreground ${
-                currentPath === link.href ? 'text-foreground' : 'text-muted-foreground'
-              }`}
-            >
-              {link.label}
-            </Link>
-          ))}
-        </nav>
-
-        {/* Mobile Menu Button */}
-        <button
-          className="md:hidden"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          aria-label="Toggle menu"
-        >
-          {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
-      </div>
-
-      {/* Mobile Navigation */}
-      {mobileMenuOpen && (
-        <div className="md:hidden border-t border-border">
-          <nav className="container flex flex-col space-y-4 py-6">
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 to={link.href}
-                onClick={() => setMobileMenuOpen(false)}
-                className={`text-base font-medium tracking-wide transition-colors hover:text-foreground ${
+                className={`text-sm font-medium tracking-wide transition-colors hover:text-foreground ${
                   currentPath === link.href ? 'text-foreground' : 'text-muted-foreground'
                 }`}
               >
                 {link.label}
               </Link>
             ))}
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => setDeletionDialogOpen(true)}
+              className="text-muted-foreground hover:text-destructive"
+            >
+              <Trash2 className="h-4 w-4 mr-2" />
+              Delete
+            </Button>
           </nav>
+
+          {/* Mobile Menu Button */}
+          <button
+            className="md:hidden"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
         </div>
-      )}
-    </header>
+
+        {/* Mobile Navigation */}
+        {mobileMenuOpen && (
+          <div className="md:hidden border-t border-border">
+            <nav className="container flex flex-col space-y-4 py-6">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  to={link.href}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className={`text-base font-medium tracking-wide transition-colors hover:text-foreground ${
+                    currentPath === link.href ? 'text-foreground' : 'text-muted-foreground'
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              ))}
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={() => {
+                  setMobileMenuOpen(false);
+                  setDeletionDialogOpen(true);
+                }}
+                className="text-muted-foreground hover:text-destructive justify-start"
+              >
+                <Trash2 className="h-4 w-4 mr-2" />
+                Delete
+              </Button>
+            </nav>
+          </div>
+        )}
+      </header>
+
+      <DeletionConfirmationDialog
+        open={deletionDialogOpen}
+        onOpenChange={setDeletionDialogOpen}
+      />
+    </>
   );
 }

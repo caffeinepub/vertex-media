@@ -1,14 +1,16 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 3,
+  "projectStateVersion": 9,
   "summary": "Build a modern, high-end black-and-white marketing website for Vertex Media, a fast-growing national media agency, emphasizing nationwide expansion and a curated network of elite photographers/videographers.",
   "architectural_notes": [
     "Site should communicate a national-scale, high-end agency brand (not a local freelancer) using a black/white palette, bold typography, and clean minimal layout.",
-    "Primary CTAs across site: “Book a Shoot” and “Join the Network”."
+    "Primary CTAs across site: “Book a Shoot” and “Join the Network”.",
+    "Services section/page must include short, powerful descriptions for: Sports Photography, Sports Videography, Athlete Highlight Packages, Brand Content Creation, Event Coverage, Monthly Media Retainers, Nationwide Contributor Network; end with a strong CTA button: “Book a Shoot” or “Partner With Vertex”.",
+    "Add a structured “Vertex Media – Service Pricing (Expanding Nationwide)” section with defined packages and prices (Sports Media Production, Athlete Mixtape Packages, Brand Content Creation, Event Coverage, Monthly Media Retainers) and positioning copy that feels scalable/national (not freelance).",
+    "Remove the “Our Work” / portfolio (gallery) section entirely while maintaining natural page flow, consistent spacing/headings/navigation, and preserving the authoritative nationwide positioning."
   ],
   "known_issues": [],
   "isFixRequest": false,
-  "imageRequirements": "## Required Images\n- Cinematic grayscale hero background with subtle film grain and abstract motion/lighting (vertex-hero-bg.dim_2400x1350.png)\n- Set of 6 grayscale portfolio thumbnails with cinematic contrast and minimal abstract subject cues (vertex-portfolio-01.dim_1200x800.png)\n- Set of 6 grayscale portfolio thumbnails with cinematic contrast and minimal abstract subject cues (vertex-portfolio-02.dim_1200x800.png)\n- Set of 6 grayscale portfolio thumbnails with cinematic contrast and minimal abstract subject cues (vertex-portfolio-03.dim_1200x800.png)\n- Set of 6 grayscale portfolio thumbnails with cinematic contrast and minimal abstract subject cues (vertex-portfolio-04.dim_1200x800.png)\n- Set of 6 grayscale portfolio thumbnails with cinematic contrast and minimal abstract subject cues (vertex-portfolio-05.dim_1200x800.png)\n- Set of 6 grayscale portfolio thumbnails with cinematic contrast and minimal abstract subject cues (vertex-portfolio-06.dim_1200x800.png)\n- Minimal black-and-white typographic wordmark reading “Vertex Media” (vertex-wordmark.dim_1200x300.png)",
   "existing_features": [
     {
       "id": "feature-create-a-cohesive-visual-design-system-for-the-vertex-media-marketing-site-that-matches-a-high-end-cinematic-minimal-aesthetic-black-white-base-bold-typography-clean-grid-based-layout-confident-professional-tone-and-consistent-spacing-typography-rules-across-all-pages",
@@ -81,6 +83,46 @@
         "REQ-10"
       ],
       "version": 1
+    },
+    {
+      "id": "feature-update-the-services-page-services-grid-section-content-the-section-starting-under-the-services-hero-to-list-the-following-services-with-short-powerful-descriptions-agency-national-scale-tone-not-freelance-sports-photography-high-impact-photography-for-athletes-teams-and-programs-sports-videography-high-impact-videography-for-athletes-teams-and-programs-athlete-highlight-packages-performance-driven-highlight-reels-designed-for-recruitment-exposure-and-branding-brand-content-creation-strategic-photo-and-video-content-built-to-grow-brand-authority-and-engagement-event-coverage-professional-media-coverage-for-tournaments-showcases-and-corporate-events-monthly-media-retainers-ongoing-content-production-for-businesses-and-organizations-that-need-consistent-high-quality-media-nationwide-contributor-network-a-curated-network-of-elite-photographers-and-videographers-deployed-coast-to-coast-under-vertex-media-quality-standards-apply-these-edits-only-within-the-selected-services-section-elements-i-e-within-the-services-grid-section-s-container-title-description-elements-selected-by-the-user",
+      "title": "Update the Services page “Services Grid” section content (the section starting under the “Services” hero) to list the following services with short, powerful descriptions (agency/national-scale tone, not freelance):\n- Sports Photography — “High-impact photography for athletes, teams, and programs.”\n- Sports Videography — “High-impact videography for athletes, teams, and programs.”\n- Athlete Highlight Packages — “Performance-driven highlight reels designed for recruitment, exposure, and branding.”\n- Brand Content Creation — “Strategic photo and video content built to grow brand authority and engagement.”\n- Event Coverage — “Professional media coverage for tournaments, showcases, and corporate events.”\n- Monthly Media Retainers — “Ongoing content production for businesses and organizations that need consistent, high-quality media.”\n- Nationwide Contributor Network — “A curated network of elite photographers and videographers deployed coast to coast under Vertex Media quality standards.”\n\nApply these edits only within the selected Services section elements (i.e., within the Services Grid section’s container/title/description elements selected by the user).",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-within-the-same-selected-services-section-add-a-structured-vertex-media-service-pricing-expanding-nationwide-pricing-block-that-includes-the-user-provided-pricing-items-and-labels-1-sports-media-production-game-coverage-35-half-day-shoot-up-to-4-hours-70-full-day-shoot-up-to-8-hours-180-2-athlete-mixtape-packages-starter-reel-40-3-brand-content-creation-social-media-package-5-posts-500-monthly-content-retainer-20-posts-1-500-2-000-custom-campaign-branding-production-3-000-4-event-coverage-single-event-up-to-4-hours-200-full-event-coverage-8-hours-500-multi-day-event-custom-quote-1-000-5-monthly-media-retainers-small-package-600-month-10-15-clips-posts-medium-package-1-500-month-20-30-clips-posts-premium-package-3-000-month-40-clips-posts-full-support-include-the-closing-note-verbatim-all-retainers-include-revisions-per-sop-structured-delivery-and-agent-managed-client-communication-apply-these-edits-only-within-the-selected-services-section-elements",
+      "title": "Within the same selected Services section, add a structured “Vertex Media – Service Pricing (Expanding Nationwide)” pricing block that includes the user-provided pricing items and labels:\n1) Sports Media Production\n- Game Coverage – $35\n- Half-Day Shoot (up to 4 hours) – $70\n- Full-Day Shoot (up to 8 hours) – $180\n\n2) Athlete mixtape Packages\n- Starter Reel – $40\n\n3) Brand Content Creation\n- Social Media Package (5 posts) – $500\n- Monthly Content Retainer (20 posts) – $1,500–$2,000\n- Custom Campaign (branding + production) – $3,000+\n\n4) Event Coverage\n- Single Event (up to 4 hours) – $200\n- Full Event Coverage (8+ hours) – $500\n- Multi-Day Event – Custom quote ($1,000+)\n\n5) Monthly Media Retainers\n- Small Package – $600/month (10–15 clips/posts)\n- Medium Package – $1,500/month (20–30 clips/posts)\n- Premium Package – $3,000/month (40+ clips/posts + full support)\n\nInclude the closing note verbatim: “All retainers include revisions per SOP, structured delivery, and agent-managed client communication.”\n\nApply these edits only within the selected Services section elements.",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-end-the-selected-services-section-with-a-strong-cta-that-offers-either-book-a-shoot-or-partner-with-vertex-implement-the-cta-as-prominent-buttons-links-consistent-with-existing-primary-secondary-button-styling-and-ensure-it-supports-the-structured-scalable-national-growth-tone-apply-these-edits-only-within-the-selected-services-section-elements-do-not-modify-other-page-sections-outside-the-selection",
+      "title": "End the selected Services section with a strong CTA that offers either “Book a Shoot” or “Partner With Vertex.” Implement the CTA as prominent buttons/links consistent with existing primary/secondary button styling, and ensure it supports the “structured, scalable, national growth” tone.\n\nApply these edits only within the selected Services section elements (do not modify other page sections outside the selection).",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-clarify-what-the-user-wants-to-delete-before-making-any-changes-present-a-short-confirmation-ui-or-modal-that-lists-the-most-likely-deletion-targets-e-g-services-page-pricing-block-services-page-cta-block-a-specific-service-card-a-form-submission-or-an-entire-page-route-and-require-the-user-to-explicitly-choose-one-target-and-confirm",
+      "title": "Clarify what the user wants to delete before making any changes. Present a short confirmation UI (or modal) that lists the most likely deletion targets (e.g., Services page pricing block, Services page CTA block, a specific service card, a form submission, or an entire page/route) and require the user to explicitly choose one target and confirm.",
+      "reqIds": [
+        "REQ-14"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-remove-the-our-work-portfolio-gallery-section-from-the-home-page-by-updating-only-the-selected-elements-that-make-up-the-portfoliopreview-section-the-section-header-subtext-and-the-portfolio-grid-cards-so-that-the-section-no-longer-renders-and-no-empty-spacing-gaps-remain-keep-all-other-home-page-sections-hero-tagline-authority-section-services-overview-intact-and-unchanged-and-ensure-the-page-still-flows-naturally-with-consistent-headings-spacing-and-the-same-authoritative-professional-nationwide-tone",
+      "title": "Remove the “Our Work” / portfolio-gallery section from the Home page by updating only the selected elements that make up the PortfolioPreview section (the section header, subtext, and the portfolio grid/cards) so that the section no longer renders and no empty spacing/gaps remain. Keep all other Home page sections (Hero, tagline, authority section, services overview) intact and unchanged, and ensure the page still flows naturally with consistent headings/spacing and the same authoritative, professional, nationwide tone.",
+      "reqIds": [
+        "REQ-15"
+      ],
+      "version": 1
     }
   ],
   "new_feature_requests": [
@@ -126,6 +168,12 @@
       "reqIds": [
         "REQ-8"
       ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-15",
+      "summary": "Remove the “Our Work” / portfolio-gallery section entirely from the existing Vertex Media website content while keeping all other sections intact; ensure natural flow, consistent headings/spacing/navigation, and preserve authoritative nationwide tone with no empty gaps",
+      "reqIds": [],
       "status": "pending"
     }
   ],
