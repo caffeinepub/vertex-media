@@ -1,10 +1,11 @@
 # Specification
 
 ## Summary
-**Goal:** Remove the “Our Work” / portfolio-gallery (PortfolioPreview) section from the Home page without affecting any other sections or overall page flow.
+**Goal:** Update Vertex Media’s site to reflect an active presence on TikTok, Instagram, and Facebook in the footer and Contact page, without changing other site content.
 
 **Planned changes:**
-- Update only the selected elements that comprise the PortfolioPreview section (section header, subtext, and portfolio grid/cards) so the section no longer renders.
-- Ensure no leftover empty container, spacing, or visual gaps remain where the portfolio section used to be.
+- Replace the existing footer “Connect” social icons/links with TikTok, Instagram, and Facebook, including appropriate aria-labels and opening links in a new tab with `rel="noopener noreferrer"`.
+- Optionally add a short, natural-sounding text line in the footer indicating Vertex Media is active on TikTok, Instagram, and Facebook, matching the site’s professional tone.
+- Update the Contact page “Connect With Us” icon row to use TikTok, Instagram, and Facebook icons/links, keeping all other Contact page content and layout intact.
 
-**User-visible outcome:** The Home page no longer shows the “Our Work” heading or portfolio/gallery grid, and the page transitions naturally between the remaining sections with consistent spacing and unchanged header/footer.
+**User-visible outcome:** Visitors see TikTok, Instagram, and Facebook social links in the footer and on the Contact page, with consistent styling and unchanged layout across mobile and desktop.

@@ -1,24 +1,35 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-16T01:11:32.885Z",
+  "generatedAt": "2026-02-16T01:17:39.062Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
   },
   "requirements": {
-    "total": 1,
-    "implemented": 1,
+    "total": 2,
+    "implemented": 2,
     "items": [
       {
-        "id": "REQ-15",
-        "summary": "Remove the “Our Work” / portfolio-gallery section from the Home page by updating only the selected elements that make up the PortfolioPreview section (the section header, subtext, and the portfolio grid/cards) so that the section no longer renders and no empty spacing/gaps remain. Keep all other Home page sections (Hero, tagline, authority section, services overview) intact and unchanged, and ensure the page still flows naturally with consistent headings/spacing and the same authoritative, professional, nationwide tone.",
+        "id": "REQ-16",
+        "summary": "Update the site footer to indicate Vertex Media is active on TikTok, Instagram, and Facebook by replacing the existing social links/icons with TikTok, Instagram, and Facebook links/icons, and (optionally) adding a short line of text that reads naturally with the existing tone (e.g., “Active on TikTok, Instagram, and Facebook.”).",
         "status": "implemented",
         "plannedFiles": [
-          "frontend/src/components/site/PortfolioPreview.tsx"
+          "frontend/src/components/site/SiteFooter.tsx"
         ],
         "matchedFiles": [
-          "frontend/src/components/site/PortfolioPreview.tsx"
+          "frontend/src/components/site/SiteFooter.tsx"
+        ]
+      },
+      {
+        "id": "REQ-17",
+        "summary": "Update the Contact page “Connect With Us” section to match the updated social platforms (TikTok, Instagram, Facebook) so the site’s social presence is consistent across relevant sections without changing any other Contact page copy, form fields, or layout structure.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/pages/ContactPage.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/pages/ContactPage.tsx"
         ]
       }
     ]
@@ -28,8 +39,8 @@
     "feature_evidence.json",
     "frontend-file-summaries.txt",
     "frontend-implementation-plan.json",
-    "frontend/src/components/site/PortfolioPreview.tsx",
-    "frontend/src/pages/HomePage.tsx",
+    "frontend/src/components/site/SiteFooter.tsx",
+    "frontend/src/pages/ContactPage.tsx",
     "project_state.json",
     "scratch/component-selection.json",
     "spec.md",

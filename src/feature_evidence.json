@@ -2,10 +2,10 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-remove-the-our-work-portfolio-gallery-section-from-the-home-page-by-updating-only-the-selected-elements-that-make-up-the-portfoliopreview-section-the-section-header-subtext-and-the-portfolio-grid-cards-so-that-the-section-no-longer-renders-and-no-empty-spacing-gaps-remain-keep-all-other-home-page-sections-hero-tagline-authority-section-services-overview-intact-and-unchanged-and-ensure-the-page-still-flows-naturally-with-consistent-headings-spacing-and-the-same-authoritative-professional-nationwide-tone",
-      "featureTitle": "Remove the “Our Work” / portfolio-gallery section from the Home page by updating only the selected elements that make up the PortfolioPreview section (the section header, subtext, and the portfolio grid/cards) so that the section no longer renders and no empty spacing/gaps remain. Keep all other Home page sections (Hero, tagline, authority section, services overview) intact and unchanged, and ensure the page still flows naturally with consistent headings/spacing and the same authoritative, professional, nationwide tone.",
+      "featureId": "feature-update-the-site-footer-to-indicate-vertex-media-is-active-on-tiktok-instagram-and-facebook-by-replacing-the-existing-social-links-icons-with-tiktok-instagram-and-facebook-links-icons-and-optionally-adding-a-short-line-of-text-that-reads-naturally-with-the-existing-tone-e-g-active-on-tiktok-instagram-and-facebook",
+      "featureTitle": "Update the site footer to indicate Vertex Media is active on TikTok, Instagram, and Facebook by replacing the existing social links/icons with TikTok, Instagram, and Facebook links/icons, and (optionally) adding a short line of text that reads naturally with the existing tone (e.g., “Active on TikTok, Instagram, and Facebook.”).",
       "files": [
-        "frontend/src/components/site/PortfolioPreview.tsx"
+        "frontend/src/components/site/SiteFooter.tsx"
       ],
       "components": [
         "core-infrastructure@1.0.2",
@@ -15,7 +15,25 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-15"
+        "REQ-16"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-update-the-contact-page-connect-with-us-section-to-match-the-updated-social-platforms-tiktok-instagram-facebook-so-the-site-s-social-presence-is-consistent-across-relevant-sections-without-changing-any-other-contact-page-copy-form-fields-or-layout-structure",
+      "featureTitle": "Update the Contact page “Connect With Us” section to match the updated social platforms (TikTok, Instagram, Facebook) so the site’s social presence is consistent across relevant sections without changing any other Contact page copy, form fields, or layout structure.",
+      "files": [
+        "frontend/src/pages/ContactPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-17"
       ],
       "confidence": "high"
     }

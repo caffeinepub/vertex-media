@@ -6,7 +6,7 @@ import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { CheckCircle2, Mail, MapPin } from 'lucide-react';
-import { SiInstagram, SiLinkedin, SiYoutube } from 'react-icons/si';
+import { SiInstagram, SiTiktok, SiFacebook } from 'react-icons/si';
 
 export function ContactPage() {
   const { actor } = useActor();
@@ -140,6 +140,15 @@ export function ContactPage() {
                 <h3 className="font-bold">Connect With Us</h3>
                 <div className="flex space-x-4">
                   <a
+                    href="https://tiktok.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-muted-foreground hover:text-foreground transition-colors"
+                    aria-label="TikTok"
+                  >
+                    <SiTiktok size={24} />
+                  </a>
+                  <a
                     href="https://instagram.com"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -149,22 +158,13 @@ export function ContactPage() {
                     <SiInstagram size={24} />
                   </a>
                   <a
-                    href="https://linkedin.com"
+                    href="https://facebook.com"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-muted-foreground hover:text-foreground transition-colors"
-                    aria-label="LinkedIn"
+                    aria-label="Facebook"
                   >
-                    <SiLinkedin size={24} />
-                  </a>
-                  <a
-                    href="https://youtube.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-muted-foreground hover:text-foreground transition-colors"
-                    aria-label="YouTube"
-                  >
-                    <SiYoutube size={24} />
+                    <SiFacebook size={24} />
                   </a>
                 </div>
               </div>

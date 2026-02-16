@@ -1,4 +1,4 @@
-import { SiInstagram, SiLinkedin, SiYoutube } from 'react-icons/si';
+import { SiInstagram, SiTiktok, SiFacebook } from 'react-icons/si';
 
 export function SiteFooter() {
   const currentYear = new Date().getFullYear();
@@ -31,6 +31,15 @@ export function SiteFooter() {
             <h4 className="text-sm font-bold tracking-wider uppercase">Connect</h4>
             <div className="flex space-x-4">
               <a
+                href="https://tiktok.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-foreground transition-colors"
+                aria-label="TikTok"
+              >
+                <SiTiktok size={20} />
+              </a>
+              <a
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -40,22 +49,13 @@ export function SiteFooter() {
                 <SiInstagram size={20} />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-foreground transition-colors"
-                aria-label="LinkedIn"
+                aria-label="Facebook"
               >
-                <SiLinkedin size={20} />
-              </a>
-              <a
-                href="https://youtube.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-foreground transition-colors"
-                aria-label="YouTube"
-              >
-                <SiYoutube size={20} />
+                <SiFacebook size={20} />
               </a>
             </div>
           </div>

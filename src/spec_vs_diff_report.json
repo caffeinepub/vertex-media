@@ -1,25 +1,24 @@
 {
   "kind": "spec_vs_diff_report",
   "version": "1.0",
-  "generatedAt": "2026-02-16T01:11:32.882Z",
-  "summary": "PortfolioPreview was changed to render nothing (returns null), and HomePage appears to have removed/cleaned up the portfolio preview usage. This likely removes the “Our Work” section, but the diff shows HomePage was modified, so the constraint/AC that implementation be limited only to the selected PortfolioPreview elements cannot be confirmed and may be violated.",
+  "generatedAt": "2026-02-16T01:17:39.059Z",
+  "summary": "REQ-16 appears implemented in SiteFooter by replacing social icons/links with TikTok, Instagram, and Facebook and including aria-labels plus target=_blank with rel=\"noopener noreferrer\". REQ-17 cannot be fully verified from the provided truncated ContactPage diff; only the new icon imports are visible, not the actual “Connect With Us” icon row/links.",
   "missing_requirements": [
     {
-      "id": "REQ-15",
-      "requirement": "Implementation is limited to updating the PortfolioPreview section’s selected elements only (corresponding to the provided XPaths), without modifying other page sections.",
-      "reason": "The diff shows changes in both the PortfolioPreview component and the HomePage file. While removing the section may require removing its invocation/import, this goes beyond changes strictly within the PortfolioPreview selected elements/XPaths, and the provided diff does not demonstrate that edits were confined only to the user-selected PortfolioPreview elements.",
+      "id": "REQ-17",
+      "requirement": "Update the Contact page “Connect With Us” section to use TikTok, Instagram, and Facebook icons/links (replacing LinkedIn/YouTube) without changing any other Contact page copy, form fields, or layout structure.",
+      "reason": "The ContactPage.tsx diff is truncated before showing the “Connect With Us” section. The summary shows only the import of SiInstagram/SiTiktok/SiFacebook, but does not provide evidence that the icon row links were actually replaced/updated (or that no other contact content was changed beyond the social icons/links).",
       "evidence": [
-        "frontend/src/components/site/PortfolioPreview.tsx",
-        "frontend/src/pages/HomePage.tsx"
+        "frontend/src/pages/ContactPage.tsx (truncated)"
       ]
     }
   ],
   "hallucinated_features": [],
-  "confidence": 0.64,
+  "confidence": 0.62,
   "changed_files": [
     "frontend-file-summaries.txt",
-    "frontend/src/components/site/PortfolioPreview.tsx",
-    "frontend/src/pages/HomePage.tsx",
+    "frontend/src/components/site/SiteFooter.tsx",
+    "frontend/src/pages/ContactPage.tsx",
     "project_state.json"
   ]
 }

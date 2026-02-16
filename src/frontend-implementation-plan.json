@@ -1,23 +1,38 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Remove Home page PortfolioPreview (“Our Work”) section rendering",
+  "title": "Update Vertex Media social presence to TikTok, Instagram, and Facebook (footer + contact)",
   "requirements": [
     {
-      "id": "REQ-15",
-      "summary": "Stop rendering the “Our Work” portfolio/gallery preview section on the Home page without leaving spacing, while keeping all other Home page sections unchanged.",
+      "id": "REQ-16",
+      "summary": "Replace footer social links/icons with TikTok, Instagram, and Facebook and optionally add a short social-presence line without affecting layout or other footer content.",
       "acceptanceCriteria": [
-        "On the Home page, the “Our Work” heading and its portfolio/gallery grid do not appear anywhere.",
-        "No blank/empty section container remains (no extra vertical padding/margins where the portfolio section used to be).",
-        "Hero/tagline, authority section, and services overview remain present and unchanged in content and styling.",
-        "Site-wide header navigation and footer remain unchanged and visually consistent.",
-        "Implementation is limited to updating the PortfolioPreview section’s selected elements only (corresponding to the provided XPaths), without modifying other page sections."
+        "In frontend/src/components/site/SiteFooter.tsx, the “Connect” section displays TikTok, Instagram, and Facebook icons/links (not LinkedIn/YouTube).",
+        "Each social icon link includes an appropriate aria-label and opens in a new tab with rel=\"noopener noreferrer\".",
+        "If a textual mention is added, it clearly states Vertex Media is active on TikTok, Instagram, and Facebook and matches the site’s professional, confident tone.",
+        "Footer layout spacing and alignment remain consistent with the current design (no wrapping/overlap issues on mobile or desktop)."
       ],
       "file_operations": [
         {
-          "path": "frontend/src/components/site/PortfolioPreview.tsx",
+          "path": "frontend/src/components/site/SiteFooter.tsx",
           "operation": "modify",
-          "description": "Update the PortfolioPreview component so the portfolio section header, subtext, and grid/cards no longer render (e.g., render nothing), ensuring no residual section wrapper spacing remains and that generated portfolio images are no longer referenced by this section."
+          "description": "Update the existing “Connect” social icon row by replacing LinkedIn/YouTube with TikTok and Facebook (keep Instagram), ensuring each link has correct aria-label, target=_blank, and rel=\"noopener noreferrer\". If adding the optional text line (“Active on TikTok, Instagram, and Facebook.” or similar), place it within the Connect section in a way that preserves spacing/alignment and does not disrupt responsive layout. Verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-17",
+      "summary": "Update Contact page “Connect With Us” social icons/links to TikTok, Instagram, and Facebook while leaving all other Contact page content and structure unchanged.",
+      "acceptanceCriteria": [
+        "In frontend/src/pages/ContactPage.tsx, the “Connect With Us” icon row uses TikTok, Instagram, and Facebook icons/links (not LinkedIn/YouTube).",
+        "No other Contact page sections (hero copy, nationwide messaging, forms, success state text) are modified beyond the social icons/links.",
+        "The updated social icons maintain the existing visual style (size, color, hover behavior) and do not disrupt the page layout."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/ContactPage.tsx",
+          "operation": "modify",
+          "description": "In the “Connect With Us” section only, replace the LinkedIn/YouTube icons/links with TikTok and Facebook (keep Instagram), maintaining the same styling classes, icon sizing, hover behavior, and link security attributes (target=_blank with rel=\"noopener noreferrer\" and appropriate aria-labels). Do not alter any other copy, form fields, success-state messaging, or layout structure. Verify the component's usage instructions before implementing."
         }
       ]
     }

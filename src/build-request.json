@@ -1,54 +1,63 @@
 {
   "kind": "build_request",
-  "title": "Remove the Home page “Our Work” portfolio/gallery section",
+  "title": "Add TikTok, Instagram, and Facebook presence to Vertex Media site (footer + contact)",
   "priority": "normal",
   "requirements": [
     {
-      "id": "REQ-15",
-      "text": "Remove the “Our Work” / portfolio-gallery section from the Home page by updating only the selected elements that make up the PortfolioPreview section (the section header, subtext, and the portfolio grid/cards) so that the section no longer renders and no empty spacing/gaps remain. Keep all other Home page sections (Hero, tagline, authority section, services overview) intact and unchanged, and ensure the page still flows naturally with consistent headings/spacing and the same authoritative, professional, nationwide tone.",
+      "id": "REQ-16",
+      "text": "Update the site footer to indicate Vertex Media is active on TikTok, Instagram, and Facebook by replacing the existing social links/icons with TikTok, Instagram, and Facebook links/icons, and (optionally) adding a short line of text that reads naturally with the existing tone (e.g., “Active on TikTok, Instagram, and Facebook.”).",
       "target": "frontend",
       "source": {
         "messageIds": [
           "msg-4"
         ],
         "quotes": [
-          "Edit the existing Vertex Media website content to remove the “Our Work” or portfolio/gallery section entirely.",
-          "Keep all other content intact",
-          "Ensure: The page still flows naturally after removing the section ... No placeholder gaps or empty sections appear",
-          "The user instructions should be applied ONLY to the elements selected in this prompt."
+          "Edit the existing Vertex Media website content to include that the company is active on TikTok, Instagram, and Facebook.",
+          "Add social media icons or mentions in the footer or relevant sections.",
+          "Maintain professional, confident, and national brand tone.",
+          "Ensure the mention flows naturally and does not disrupt page layout or messaging.",
+          "Keep all other content intact (hero, tagline, services, about, network, contact)."
         ]
       },
       "acceptanceCriteria": [
-        "On the Home page, the “Our Work” heading and its portfolio/gallery grid do not appear anywhere.",
-        "No blank/empty section container remains (no extra vertical padding/margins where the portfolio section used to be).",
-        "Hero/tagline, authority section, and services overview remain present and unchanged in content and styling.",
-        "Site-wide header navigation and footer remain unchanged and visually consistent.",
-        "Implementation is limited to updating the PortfolioPreview section’s selected elements only (corresponding to the provided XPaths), without modifying other page sections."
+        "In frontend/src/components/site/SiteFooter.tsx, the “Connect” section displays TikTok, Instagram, and Facebook icons/links (not LinkedIn/YouTube).",
+        "Each social icon link includes an appropriate aria-label and opens in a new tab with rel=\"noopener noreferrer\".",
+        "If a textual mention is added, it clearly states Vertex Media is active on TikTok, Instagram, and Facebook and matches the site’s professional, confident tone.",
+        "Footer layout spacing and alignment remain consistent with the current design (no wrapping/overlap issues on mobile or desktop)."
+      ]
+    },
+    {
+      "id": "REQ-17",
+      "text": "Update the Contact page “Connect With Us” section to match the updated social platforms (TikTok, Instagram, Facebook) so the site’s social presence is consistent across relevant sections without changing any other Contact page copy, form fields, or layout structure.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "Add social media icons or mentions in the footer or relevant sections.",
+          "Keep all other content intact (hero, tagline, services, about, network, contact)."
+        ]
+      },
+      "acceptanceCriteria": [
+        "In frontend/src/pages/ContactPage.tsx, the “Connect With Us” icon row uses TikTok, Instagram, and Facebook icons/links (not LinkedIn/YouTube).",
+        "No other Contact page sections (hero copy, nationwide messaging, forms, success state text) are modified beyond the social icons/links.",
+        "The updated social icons maintain the existing visual style (size, color, hover behavior) and do not disrupt the page layout."
       ]
     }
   ],
   "constraints": [
-    "Apply the change ONLY within the user-selected elements for the portfolio/gallery section (provided XPaths). Do not modify other Home page sections or other routes/pages.",
-    "Do not edit any files under frontend/src/components/ui or other immutable paths listed in SYSTEM_CONTEXT.",
-    "Do not remove or rename generated static image assets; only remove their usage by the portfolio/gallery section if needed."
+    "Frontend immutable paths must not be edited: frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useInternetIdentity.tsx, frontend/src/hooks/useActor.ts, frontend/src/main.tsx, frontend/src/components/ui.",
+    "Keep all other website content intact outside the social media mentions/icons (do not alter hero, tagline, services, about, join network, or contact content beyond the specified social sections).",
+    "Do not add any backend changes for social links; this is a content/UI-only update."
   ],
   "nonGoals": [
-    "Do not add a new replacement section in place of the portfolio/gallery section.",
-    "Do not change copy, layout, or CTAs in the Hero, Authority, Services Overview, About, Join Our Network, or Contact pages/sections.",
-    "Do not implement any backend changes."
+    "Adding embedded social feeds, auto-posting, or pulling content from TikTok/Instagram/Facebook APIs.",
+    "Implementing social login/authentication.",
+    "Changing site navigation, page routing, or other page section copy beyond the requested social presence mention/icons."
   ],
   "imageRequirements": {
     "required": [],
     "edits": []
-  },
-  "userProfileUpdate": {
-    "goalsToAdd": [],
-    "goalsToRemove": [],
-    "preferencesToAdd": [],
-    "preferencesToRemove": [],
-    "miscToAdd": [],
-    "miscToRemove": [],
-    "fieldsToSet": {},
-    "fieldsToDelete": []
   }
 }

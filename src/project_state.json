@@ -1,13 +1,14 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 9,
+  "projectStateVersion": 11,
   "summary": "Build a modern, high-end black-and-white marketing website for Vertex Media, a fast-growing national media agency, emphasizing nationwide expansion and a curated network of elite photographers/videographers.",
   "architectural_notes": [
     "Site should communicate a national-scale, high-end agency brand (not a local freelancer) using a black/white palette, bold typography, and clean minimal layout.",
     "Primary CTAs across site: “Book a Shoot” and “Join the Network”.",
     "Services section/page must include short, powerful descriptions for: Sports Photography, Sports Videography, Athlete Highlight Packages, Brand Content Creation, Event Coverage, Monthly Media Retainers, Nationwide Contributor Network; end with a strong CTA button: “Book a Shoot” or “Partner With Vertex”.",
     "Add a structured “Vertex Media – Service Pricing (Expanding Nationwide)” section with defined packages and prices (Sports Media Production, Athlete Mixtape Packages, Brand Content Creation, Event Coverage, Monthly Media Retainers) and positioning copy that feels scalable/national (not freelance).",
-    "Remove the “Our Work” / portfolio (gallery) section entirely while maintaining natural page flow, consistent spacing/headings/navigation, and preserving the authoritative nationwide positioning."
+    "Remove the “Our Work” / portfolio (gallery) section entirely while maintaining natural page flow, consistent spacing/headings/navigation, and preserving the authoritative nationwide positioning.",
+    "Add TikTok, Instagram, and Facebook social icons/mentions (preferably in the footer) with a professional, nationwide tone; keep all other page sections and layout intact."
   ],
   "known_issues": [],
   "isFixRequest": false,
@@ -123,6 +124,22 @@
         "REQ-15"
       ],
       "version": 1
+    },
+    {
+      "id": "feature-update-the-site-footer-to-indicate-vertex-media-is-active-on-tiktok-instagram-and-facebook-by-replacing-the-existing-social-links-icons-with-tiktok-instagram-and-facebook-links-icons-and-optionally-adding-a-short-line-of-text-that-reads-naturally-with-the-existing-tone-e-g-active-on-tiktok-instagram-and-facebook",
+      "title": "Update the site footer to indicate Vertex Media is active on TikTok, Instagram, and Facebook by replacing the existing social links/icons with TikTok, Instagram, and Facebook links/icons, and (optionally) adding a short line of text that reads naturally with the existing tone (e.g., “Active on TikTok, Instagram, and Facebook.”).",
+      "reqIds": [
+        "REQ-16"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-contact-page-connect-with-us-section-to-match-the-updated-social-platforms-tiktok-instagram-facebook-so-the-site-s-social-presence-is-consistent-across-relevant-sections-without-changing-any-other-contact-page-copy-form-fields-or-layout-structure",
+      "title": "Update the Contact page “Connect With Us” section to match the updated social platforms (TikTok, Instagram, Facebook) so the site’s social presence is consistent across relevant sections without changing any other Contact page copy, form fields, or layout structure.",
+      "reqIds": [
+        "REQ-17"
+      ],
+      "version": 1
     }
   ],
   "new_feature_requests": [
@@ -173,6 +190,12 @@
     {
       "id": "AR-15",
       "summary": "Remove the “Our Work” / portfolio-gallery section entirely from the existing Vertex Media website content while keeping all other sections intact; ensure natural flow, consistent headings/spacing/navigation, and preserve authoritative nationwide tone with no empty gaps",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-16",
+      "summary": "Update site content to mention and link Vertex Media’s active social channels (TikTok, Instagram, Facebook) via icons/mentions in the footer or relevant sections, preserving professional nationwide tone and existing layout/content",
       "reqIds": [],
       "status": "pending"
     }
